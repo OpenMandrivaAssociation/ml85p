@@ -1,7 +1,7 @@
 Summary:	Driver for the Samsung ML-85G and QL-85G winprinters
 Name:		ml85p
 Version:	0.2.0
-Release:	%mkrel 7
+Release:	%mkrel 8
 License:	GPL
 Group:		System/Printing
 URL:		http://www.pragana.net/gdiprinters.html
