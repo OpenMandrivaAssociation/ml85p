@@ -1,0 +1,24 @@
+--- ml85p-0.2.0.orig/ml85p.c	2002-03-11 22:21:51.000000000 -0300
++++ ml85p-0.2.0/ml85p.c	2007-08-16 15:23:21.000000000 -0300
+@@ -7,12 +7,19 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+-#include <asm/io.h>
+-#include <asm/system.h>
++#include <sys/io.h>
+ #include <time.h>
+ #include "ml85p.h"
+ 
++/* 
++ * not sure if this works
++ */
++#define __cli() __asm__ __volatile__("cli": : :"memory")
++#define __sti() __asm__ __volatile__("sti": : :"memory")
++
+ int cmd_seq[] = { 
+ 0x80, 1, 0xa0, 1, 0x00, 0, 0xa0, 1, -2, 
+ 0x89, 1, 0x8a, 1, 0xa6, 1, 0x07, 0, 0xa7, 1, 0x8b, 1, 0x8b, 1, -2,
