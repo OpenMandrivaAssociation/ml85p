@@ -7,7 +7,7 @@ Group:		System/Printing
 Url:		http://www.pragana.net/gdiprinters.html
 Source0:	http://www.pragana.net/%{name}-%{version}.tar.gz
 Patch0:		ml85p-0.2.0-build_fix.patch
-Exclusivearch:	%{ix86} x86_64
+Exclusivearch:	%{ix86} %{x86_64}
 
 %description
 Driver for the Samsung ML-85G and QL-85G winprinters.
@@ -15,7 +15,7 @@ Driver for the Samsung ML-85G and QL-85G winprinters.
 %prep
 
 %setup -q
-%apply_patches
+%autopatch -p1
 
 # fix attribs
 chmod 644 *
