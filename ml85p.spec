@@ -4,7 +4,7 @@ Version:	0.2.0
 Release:	24
 License:	GPLv2
 Group:		System/Printing
-Url:		http://www.pragana.net/gdiprinters.html
+Url:		https://www.pragana.net/gdiprinters.html
 Source0:	http://www.pragana.net/%{name}-%{version}.tar.gz
 Patch0:		ml85p-0.2.0-build_fix.patch
 Exclusivearch:	%{ix86} %{x86_64}
